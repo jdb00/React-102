@@ -34,10 +34,11 @@ class App extends Component {
             <div className="items">
               {this.items.map(function(item){
                 var checkbox = "todo-checkbox-"+item.id.toString();
+                console.log(checkbox)
                 return(
                   <div className="item" key={item.id}>
-                      <label className="text" htmlFor="todo-checkbox-{item.id.toString()}">{item.text}</label>
-                      <input type="checkbox" name="todo-checkbox" id="todo-checkbox-1"/>
+                      <label className="text" htmlFor={checkbox}>{item.text}</label>
+                      <input type="checkbox" name="todo-checkbox" id={checkbox}/>
                   </div>
                 )
               })}
